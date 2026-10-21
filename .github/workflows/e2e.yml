@@ -27,8 +27,7 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10
+        # version is read automatically from the packageManager field in package.json
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -63,5 +62,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-traces-${{ matrix.project }}
-          path: trace/
+          path: test-results/**/trace.zip
           retention-days: 7
