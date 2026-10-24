@@ -144,7 +144,7 @@ to `main`/`develop`. The gate lives in `scripts/audit-gate.mjs` and enforces the
 baseline:
 
 - **critical ≤ 0** — a new critical finding always fails CI.
-- **high ≤ 1** — the single accepted `braces` finding above.
+- **high ≤ 2** — accepted `braces` and `toml` findings above (patched version available but pending full resolution in the audited tree).
 
 Raising either baseline requires a matching entry (owner + expiry) in the table
 above.
